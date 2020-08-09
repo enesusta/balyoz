@@ -27,5 +27,12 @@ func TestCapitalizeWithTurkish(t *testing.T) {
 	if isparta != "Isparta" {
 		t.Errorf("Test failed, expected %v, go %v", "Isparta", isparta)
 	}
+	
+	corum := CapitalizeWithTurkish("çorum")
+	log.Println(corum)
+
+	if corum != "Çorum" {
+		t.Errorf("Test failed, expected %v, go %v", "Çorum", corum)
+	}
 
 }
